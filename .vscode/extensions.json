@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "prisma.prisma",
+        "denoland.vscode-deno",
+        "ms-vscode.vscode-typescript-next",
+        "ecmel.vscode-html-css"
+    ]
+}

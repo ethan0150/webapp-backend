@@ -3,7 +3,7 @@
 2. Fork this repo
 3. Clone the fork
 4. ```bash
-   cd webapp-final
+   cd webapp-backend
    deno install --allow-scripts=npm:prisma@6.0.0,npm:@prisma/engines@6.0.0
    ```
 5. Try 

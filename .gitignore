@@ -2,5 +2,10 @@ node_modules
 # Keep environment variables out of version control
 
 uploads/
+downloads/
+
 .vscode/settings.json
 deno.lock
+
+.env
+config/

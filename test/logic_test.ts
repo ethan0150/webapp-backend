@@ -1,3 +1,4 @@
+import "jsr:@std/dotenv/load";
 import * as logic from '../logic.ts'
 import { ChatEntry, Role, Scenario } from "../model.ts";
 

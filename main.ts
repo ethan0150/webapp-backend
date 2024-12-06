@@ -1,10 +1,11 @@
+import "jsr:@std/dotenv/load";
 // @deno-types="npm:@types/express@4.17.15"
 import express, { Request, Response } from "npm:express@4.21.1";
 // @deno-types="npm:@types/multer"
 import multer from "npm:multer2"
 import * as logic from './logic.ts'
 //import * as model from './model.ts';
-import "jsr:@std/dotenv/load";
+
 import { Scenario } from "./model.ts";
 
 const app = express();

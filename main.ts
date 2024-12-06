@@ -3,7 +3,9 @@ import express, { Request, Response } from "npm:express@4.21.1";
 // @deno-types="npm:@types/multer"
 import multer from "npm:multer2"
 import * as logic from './logic.ts'
+//import * as model from './model.ts';
 import "jsr:@std/dotenv/load";
+import { Scenario } from "./model.ts";
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
@@ -16,13 +18,13 @@ app.get("/", (_req: Request, res: Response ) => {
   // TODO: send frontend (index.html etc.)
 });
 
-app.get("/prev_chat/:scenario", (req: Request, res: Response) => {
-  res.status(200).send(logic.getChat(req.body.scenario));
+app.get("/prev_chat/:scenario", async(req: Request, res: Response) => {
+  res.status(200).send(await logic.getChat(req.params.scenario as Scenario));
 });
 
 app.post("/speech", upload.single("speech"), async(req: Request, res: Response) => {
-  const accent = req.body.accent;
-  const scenario = req.body.scenario;
+  const accent: string = req.body.accent;
+  const scenario: string = req.body.scenario;
   const speechPath = req.file?.path;
 
   if (speechPath) {

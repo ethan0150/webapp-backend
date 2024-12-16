@@ -4,19 +4,22 @@ import express, { Request, Response } from "npm:express@4.21.1";
 // @deno-types="npm:@types/multer"
 import multer from "npm:multer2"
 import * as logic from './logic.ts'
-//import * as model from './model.ts';
+import cors from "npm:cors@2.8.5";
 
 import { Scenario } from "./model.ts";
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
+await logic.deleteAllChat();
+await logic.initChat();
+
 app.use(express.static("uploads"));
 app.use(express.static("downloads"));
+app.use(cors());
 
 app.get("/", (_req: Request, res: Response ) => {
   res.send("Welcome to the Dinosaur API!");
-  // TODO: send frontend (index.html etc.)
 });
 
 app.get("/prev_chat/:scenario", async(req: Request, res: Response) => {

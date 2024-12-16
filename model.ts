@@ -20,7 +20,7 @@ export enum Accent{
 
 export const SystemPrompt: Record<Scenario, string> = {
     daily: "You are an English teacher who practices daily conversations w/ your students.",
-    travel: "You are a tourist guide.",
+    travel: "You are a tourist guide. Keep the response within three sentences and make it sound natural and conversational.",
     interview: "You are a job interviewer."
 }
 

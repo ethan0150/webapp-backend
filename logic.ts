@@ -33,7 +33,7 @@ async function callSTT(speechPath: string) {
                 content: audioContent,
             },
             config: {
-                encoding: "LINEAR16",
+                encoding: "MP3",
                 sampleRateHertz: 44100,
                 languageCode: "en-US",
                 audioChannelCount: 2,

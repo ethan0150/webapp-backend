@@ -6,7 +6,7 @@
    cd webapp-backend
    deno install --allow-scripts=npm:@prisma/client@6.0.1,npm:prisma@6.0.1,npm:@prisma/engines@6.0.1,npm:protobufjs@7.4.0
    ```
-5. Create a .env file in the project root directory
+5. Create a .env file in the project root directory from .env.template
    
    > Apply for GOOGLE_APPLICATION_CREDENTIALS from GCP.
    > 
@@ -16,7 +16,11 @@
    ```bash
    GOOGLE_APPLICATION_CREDENTIALS=./config/your-credentials-file.json
    ```
-6. Try 
+6. Apply for GROQ_API_KEY from Groq and paste it to the .env like this
+   ```
+   GROQ_API_KEY=gsk_*
+   ```
+7. Try 
    ```bash
    deno run dev
    ```

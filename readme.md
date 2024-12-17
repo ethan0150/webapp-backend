@@ -5,6 +5,7 @@
 4. ```bash
    cd webapp-backend
    deno install --allow-scripts=npm:@prisma/client@6.0.1,npm:prisma@6.0.1,npm:@prisma/engines@6.0.1,npm:protobufjs@7.4.0
+   deno run -A npm:prisma@latest generate
    ```
 5. Create a .env file in the project root directory from .env.template
    
@@ -25,4 +26,4 @@
    deno run dev
    ```
    to start the backend (It's just a skeleton ATM)
-7. Make PR to this repo for changes to be merged
+8. Make PR to this repo for changes to be merged
